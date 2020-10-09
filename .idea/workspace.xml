@@ -19,17 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/css.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/layout/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/layout/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +59,7 @@
       <updated>1602087254399</updated>
       <workItem from="1602087260890" duration="4075000" />
       <workItem from="1602237443943" duration="161000" />
-      <workItem from="1602237631902" duration="7804000" />
+      <workItem from="1602237631902" duration="8125000" />
     </task>
     <servers />
   </component>
