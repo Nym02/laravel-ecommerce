@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/layout/template.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/css.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/layout/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/layout/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,7 +67,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602087254399</updated>
-      <workItem from="1602087260890" duration="3516000" />
+      <workItem from="1602087260890" duration="4075000" />
+      <workItem from="1602237443943" duration="161000" />
+      <workItem from="1602237631902" duration="7804000" />
     </task>
     <servers />
   </component>
@@ -80,15 +89,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="687" y="201" key="FileChooserDialogImpl" timestamp="1602087469756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="201" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602087469756" />
-    <state x="344" y="78" key="SettingsEditor" timestamp="1602087473204">
+    <state x="344" y="78" key="SettingsEditor" timestamp="1602241491646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602087473204" />
+    <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602241491646" />
   </component>
 </project>
