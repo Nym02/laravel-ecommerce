@@ -19,13 +19,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="" />
+    <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-ecommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/bootstrap/cache/packages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/bootstrap/cache/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/template.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/storage/framework/sessions/y6qZIiFeyEDhjUHOtnaAkGBcWnZz235wPr1sLFJQ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/ecom/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -157,6 +178,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\laravel-ecommerce\ecom\app\Http\Controllers\Backend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\xampp\htdocs\laravel-ecommerce\ecom\resources\views\Backend\pages\brands" />
     </key>
@@ -172,6 +196,8 @@
       <workItem from="1602087260890" duration="4075000" />
       <workItem from="1602237443943" duration="161000" />
       <workItem from="1602237631902" duration="8125000" />
+      <workItem from="1602320234669" duration="5052000" />
+      <workItem from="1602340472499" duration="7785000" />
     </task>
     <servers />
   </component>
