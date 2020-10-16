@@ -37,15 +37,39 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('brands.manage') }}" class="nav-link">
+                            <a href="{{ route('brands.create') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Create Brand</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                            <a href="{{ route('brands.manage') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Manage Brand</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Category
+                            <i class="fas fa-angle-left right"></i>
+                            {{--                            <span class="badge badge-info right">6</span>--}}
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('category.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('category.manage') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Categories</p>
                             </a>
                         </li>
                     </ul>

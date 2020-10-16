@@ -45,9 +45,10 @@
                                     <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">#SL</th>
-                                        <th scope="col">Brand Icon</th>
-                                        <th scope="col">Brand Name</th>
-                                        <th scope="col">Brand Description</th>
+                                        <th scope="col">Category Icon</th>
+                                        <th scope="col">Category Name</th>
+                                        <th scope="col">Category Description</th>
+                                        <th scope="col">Parent Category</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                     </thead>
@@ -55,27 +56,27 @@
                                     @php
                                         $i = 1;
                                     @endphp
-                                    @foreach($brands as $brand)
+                                    @foreach($category as $cat)
                                         <tr>
                                             <th scope="row">{{ $i }}</th>
                                             <td>
-                                                @if($brand->image == null)
+                                                @if($cat->cat_thumbnail == null)
                                                     No icon available
                                                 @else
-                                                    <img src="{{ asset('Backend/img/Brands/' . $brand->image) }}"
+                                                    <img src="{{ asset('Backend/img/category/' . $cat->cat_thumbnail) }}"
                                                          width="50" alt="Brand Icon">
                                                 @endif
                                             </td>
-                                            <td>{{ $brand->name }}</td>
-                                            <td>{{ $brand->desc }}</td>
+                                            <td>{{ $cat->cat_name }}</td>
+                                            <td>{{ $cat->cat_desc }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="{{ route('brands.edit', $brand->id) }}"
+                                                    <a href="{{ route('category.edit', $cat->cat_id) }}"
                                                        class="btn btn-primary">Update</a>
                                                     <a href="" class="btn btn-danger" data-toggle="modal"
-                                                       data-target="#deleteBrand{{ $brand->id }}">Delete</a>
+                                                       data-target="#deleteBrand{{ $cat->cat_id }}">Delete</a>
                                                     {{-- Modal start--}}
-                                                    <div class="modal fade" id="deleteBrand{{ $brand->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal fade" id="deleteBrand{{ $cat->cat_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
@@ -85,7 +86,7 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <form action="{{ route('brands.destroy', $brand->id) }}" method="post">
+                                                                    <form action="{{ route('category.destroy', $cat->cat_id) }}" method="post">
                                                                         @csrf
                                                                         <button type="submit" class="btn btn-danger">Delete</button>
                                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
