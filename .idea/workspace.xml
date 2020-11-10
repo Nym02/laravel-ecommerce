@@ -20,25 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-ecommerce.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/BrandsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/BrandsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Models/Backend/brands.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Models/Backend/brands.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/bootstrap/cache/packages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/bootstrap/cache/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_10_16_153454_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2020_10_16_153454_create_categories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands/manage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/manage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_psr4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +167,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -203,7 +194,22 @@
       <workItem from="1602412891835" duration="598000" />
       <workItem from="1602494288145" duration="9533000" />
       <workItem from="1602807963836" duration="2047000" />
-      <workItem from="1602840156728" duration="14210000" />
+      <workItem from="1602840156728" duration="14862000" />
+      <workItem from="1602931326266" duration="15386000" />
+      <workItem from="1603013987169" duration="3206000" />
+      <workItem from="1603507466359" duration="842000" />
+      <workItem from="1603509321344" duration="821000" />
+      <workItem from="1603728903416" duration="2829000" />
+      <workItem from="1603786375326" duration="3190000" />
+      <workItem from="1603895361092" duration="902000" />
+      <workItem from="1604053765539" duration="1093000" />
+      <workItem from="1604136029540" duration="4740000" />
+      <workItem from="1604247935233" duration="5413000" />
+      <workItem from="1604338543128" duration="682000" />
+      <workItem from="1604415365839" duration="3371000" />
+      <workItem from="1604448548601" duration="2403000" />
+      <workItem from="1604492830759" duration="2192000" />
+      <workItem from="1605023154424" duration="9653000" />
     </task>
     <servers />
   </component>
@@ -226,13 +232,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="452" y="141" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1604421896792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="141" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604421896792" />
+    <state x="624" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603823199847">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603823199847" />
     <state x="687" y="201" key="FileChooserDialogImpl" timestamp="1602087469756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="201" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602087469756" />
-    <state x="344" y="78" key="SettingsEditor" timestamp="1602241491646">
+    <state x="465" y="11" key="SettingsEditor" timestamp="1605025689466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602241491646" />
+    <state x="465" y="11" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605025689466" />
   </component>
 </project>
