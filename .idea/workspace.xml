@@ -21,15 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_10_16_153454_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2020_10_16_153454_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/manage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/category1604250966.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +203,8 @@
       <workItem from="1604415365839" duration="3371000" />
       <workItem from="1604448548601" duration="2403000" />
       <workItem from="1604492830759" duration="2192000" />
-      <workItem from="1605023154424" duration="9653000" />
+      <workItem from="1605023154424" duration="10307000" />
+      <workItem from="1605083385040" duration="13257000" />
     </task>
     <servers />
   </component>
