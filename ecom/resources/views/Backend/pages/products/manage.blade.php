@@ -66,6 +66,16 @@
                                             <th scope="row">{{ $i }}</th>
                                             <td>
 
+                                                @foreach($product->productImage as $productImg)
+
+                                                        <img src="{{ asset('Backend/img/products/' . $productImg->product_image) }}" alt="" width="35">
+
+                                                    @php
+                                                        break;
+                                                    @endphp
+
+                                                @endforeach
+
                                             </td>
                                             <td>{{ $product->product_title }}</td>
                                             <td>{{ $product->product_description }}</td>
@@ -81,13 +91,15 @@
                                                     <span class="badge badge-danger">Deactive</span>
                                                 @endif
                                             </td>
-                                                <td><div class="btn-group">
+                                            <td>
+                                                <div class="btn-group">
                                                     <a href="{{ route('product.edit', $product->id) }}"
                                                        class="btn btn-primary">Update</a>
                                                     <a href="" class="btn btn-danger" data-toggle="modal"
-                                                       data-target="#deleteBrand{{ $product->id }}">Delete</a>
+                                                       data-target="#deleteProduct{{ $product->id }}">Delete</a>
                                                     {{-- Modal start--}}
-                                                    <div class="modal fade" id="deleteBrand{{ $product->id }}" tabindex="-1"
+                                                    <div class="modal fade" id="deleteProduct{{ $product->id }}"
+                                                         tabindex="-1"
                                                          role="dialog" aria-labelledby="exampleModalLabel"
                                                          aria-hidden="true">
                                                         <div class="modal-dialog" role="document">

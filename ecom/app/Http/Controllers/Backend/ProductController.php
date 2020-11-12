@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function create()
     {
         $productCategory = Category::orderBy('cat_name', 'asc')->where('parent_id', 0)->get();
-        $productSubCategory = Category:: orderBy('cat_name', 'asc')->where('parent_id', 'id')->get();
+//        $productSubCategory = Category:: orderBy('cat_name', 'asc')->where('parent_id', 'id')->get();
         $productBrand = brands::orderBy('name', 'asc')->get();
         return view('Backend.pages.products.create', compact('productCategory', 'productSubCategory', 'productBrand'));
     }
@@ -49,7 +49,7 @@ class ProductController extends Controller
 
         $request->validate([
             'productTitle' => 'required | max:255',
-            'productRegularPrice' => 'required'
+            'productRegularPrice' => 'required | numeric'
         ], [
                 'productTitle.required' => 'Please provide product title',
                 'productRegularPrice.required' => 'Please provide product price',
@@ -104,7 +104,12 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $productCategory = Category::orderBy('cat_name', 'asc')->where('parent_id', 0)->get();
+        $productBrand = brands::orderBy('name', 'asc')->get();
+        $editProduct = Product::find($id);
+        if(!is_null($editProduct)){
+            return view('Backend.pages.products.edit', compact('editProduct','productCategory','productBrand'));
+        }
     }
 
     /**
@@ -116,7 +121,29 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'productTitle' => 'required | max:255',
+            'productRegularPrice' => 'required | numeric'
+        ], [
+            'productTitle.required' => 'Please provide product title',
+            'productRegularPrice.required' => 'Please provide product price',
+        ]);
+
+        $product = Product::find($id);
+
+        $product->product_title = $request->productTitle;
+        $product->product_description = $request->productDescription;
+        $product->product_slug = Str::slug($request->productTitle);
+        $product->product_brand_id = $request->productBrand;
+        $product->product_category_id = $request->productCategory;
+        $product->quantity = $request->productQuantity;
+        $product->product_price = $request->productRegularPrice;
+        $product->product_offer_price = $request->productOfferPrice;
+        $product->product_status = $request->productStatus;
+        $product->save();
+
+
+        return redirect()->route('product.manage');
     }
 
     /**
@@ -127,6 +154,13 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        if(!is_null($product)){
+            $product->delete();
+            return redirect()->route('product.manage');
+        } else {
+            return redirect()->route('product.manage');
+        }
+
     }
 }

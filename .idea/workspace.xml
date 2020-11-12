@@ -22,8 +22,8 @@
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/category1604250966.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/manage.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +204,8 @@
       <workItem from="1604448548601" duration="2403000" />
       <workItem from="1604492830759" duration="2192000" />
       <workItem from="1605023154424" duration="10307000" />
-      <workItem from="1605083385040" duration="13257000" />
+      <workItem from="1605083385040" duration="13598000" />
+      <workItem from="1605179640467" duration="9507000" />
     </task>
     <servers />
   </component>
