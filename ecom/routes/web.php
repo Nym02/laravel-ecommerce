@@ -6,6 +6,8 @@ use App\Http\Controllers\Backend\BrandsController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
 
+use App\Http\Controllers\Frontend\PagesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +18,9 @@ use App\Http\Controllers\Backend\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
  */
+Route::get('/',[PagesController::class, 'index'])->name('ecom.home');
+Route::get('/products',[PagesController::class, 'create'])->name('ecom.products');
+Route::get('/product-details',[PagesController::class, 'productDetails'])->name('ecom.productDetails');
 /*
 |--------------------------------------------------------------------------
 | Backend Web Routes
