@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Backend\Product;
 use Illuminate\Http\Request;
 
-class PagesController extends Controller
+class ProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $newProducts = Product::orderBy('id','desc')->get();
-        return view('Frontend.pages.home', compact('newProducts'));
+        //
     }
 
     /**
@@ -26,11 +24,7 @@ class PagesController extends Controller
      */
     public function create()
     {
-        return view('Frontend.pages.products.products');
-    }
-
-    public function productDetails(){
-        return view('Frontend.pages.products.details');
+        //
     }
 
     /**
