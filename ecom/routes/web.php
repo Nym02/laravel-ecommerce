@@ -1,12 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Backend\pageController;
 use App\Http\Controllers\Backend\BrandsController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
 
 use App\Http\Controllers\Frontend\PagesController;
+use App\Http\Controllers\Frontend\ProductsController;
+use App\Http\Controllers\Frontend\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +22,17 @@ use App\Http\Controllers\Frontend\PagesController;
 |
  */
 Route::get('/',[PagesController::class, 'index'])->name('ecom.home');
-Route::get('/products',[PagesController::class, 'create'])->name('ecom.products');
-Route::get('/product-details',[PagesController::class, 'productDetails'])->name('ecom.productDetails');
+
+Route::group(['prefix'=> '/products'], function(){
+    Route::get('/',[ProductsController::class, 'products'])->name('ecom.products');
+    Route::get('/{product_slug}',[ProductsController::class, 'productDetails'])->name('ecom.productDetails');
+});
+
+Route::group(['prefix' => '/category'], function(){
+   Route::get('/', [CategoriesController::class, 'parentCategoryItem'])->name('category.allItem');
+   Route::get('/{id}',[CategoriesController::class, 'childCategoryItem'])->name('category.childItem');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Backend Web Routes

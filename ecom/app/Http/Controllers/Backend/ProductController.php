@@ -35,7 +35,7 @@ class ProductController extends Controller
         $productCategory = Category::orderBy('cat_name', 'asc')->where('parent_id', 0)->get();
 //        $productSubCategory = Category:: orderBy('cat_name', 'asc')->where('parent_id', 'id')->get();
         $productBrand = brands::orderBy('name', 'asc')->get();
-        return view('Backend.pages.products.create', compact('productCategory', 'productSubCategory', 'productBrand'));
+        return view('Backend.pages.products.create', compact('productCategory', 'productBrand'));
     }
 
     /**

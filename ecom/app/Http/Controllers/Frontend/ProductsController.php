@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Product;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -12,9 +13,10 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function products()
     {
-        //
+        $allProducts = Product::orderBy('id','desc')->paginate(21);
+        return view('Frontend.pages.products.products', compact('allProducts'));
     }
 
     /**
@@ -22,9 +24,10 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function productDetails($slug)
     {
-        //
+        $productDetail = Product::where('product_slug', $slug)->first();
+        return view('Frontend.pages.products.details', compact('productDetail'));
     }
 
     /**

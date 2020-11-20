@@ -20,10 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/categories/category_products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac55ad0f5d0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac55adc4523.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac56b31dedb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac56b356ec3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac56b384005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fad514a71e71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fad514b0e601.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +221,8 @@
       <workItem from="1605257118865" duration="1788000" />
       <workItem from="1605364982179" duration="4599000" />
       <workItem from="1605451667769" duration="14567000" />
-      <workItem from="1605808119088" duration="5133000" />
+      <workItem from="1605808119088" duration="5832000" />
+      <workItem from="1605860247392" duration="14680000" />
     </task>
     <servers />
   </component>

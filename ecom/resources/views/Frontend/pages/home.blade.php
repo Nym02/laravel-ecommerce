@@ -125,9 +125,19 @@
                                     <div class="products">
                                         <div class="product">
                                             <div class="product-image">
-                                                <div class="image"><a href="detail.html"><img
-                                                            src="{{ asset('Frontend/assets/images/products/p1.jpg') }}"
-                                                            alt=""></a></div>
+                                                <div class="image"><a href="detail.html">
+                                                        @foreach($recentItem->productImage as $productImg)
+
+                                                            <img
+                                                                src="{{ asset('Backend/img/products/' . $productImg->product_image) }}"
+                                                                alt="" >
+
+                                                            @php
+                                                                break;
+                                                            @endphp
+
+                                                        @endforeach
+                                                    </a></div>
                                                 <!-- /.image -->
 
                                                 <div class="tag new"><span>new</span></div>
@@ -136,7 +146,7 @@
 
                                             <div class="product-info text-left">
                                                 <h3 class="name"><a
-                                                        href="detail.html">{{ $recentItem->product_title }}</a>
+                                                        href="{{ route('ecom.productDetails', $recentItem->product_slug) }}">{{ $recentItem->product_title }}</a>
                                                 </h3>
                                                 <div class="rating rateit-small"></div>
                                                 <div class="description"></div>
