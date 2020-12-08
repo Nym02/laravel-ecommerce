@@ -10,7 +10,8 @@ class CategoriesController extends Controller
 //    public function parentCategoryItem(){
 //        return view('Frontend.pages.products.category_products');
 //    }
-    public function childCategoryItem(){
+    public function childCategoryItem()
+    {
         return view('Frontend.pages.categories.category_products');
     }
 }

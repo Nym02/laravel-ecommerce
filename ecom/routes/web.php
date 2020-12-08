@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
 use App\Http\Controllers\Backend\pageController;
 use App\Http\Controllers\Backend\BrandsController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\DistrictController;
+use App\Http\Controllers\Backend\DivisionController;
 
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProductsController;
@@ -21,16 +22,16 @@ use App\Http\Controllers\Frontend\CategoriesController;
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('/',[PagesController::class, 'index'])->name('ecom.home');
+Route::get('/', [PagesController::class, 'index'])->name('ecom.home');
 
-Route::group(['prefix'=> '/products'], function(){
-    Route::get('/',[ProductsController::class, 'products'])->name('ecom.products');
-    Route::get('/{product_slug}',[ProductsController::class, 'productDetails'])->name('ecom.productDetails');
+Route::group(['prefix' => '/products'], function () {
+    Route::get('/', [ProductsController::class, 'products'])->name('ecom.products');
+    Route::get('/{product_slug}', [ProductsController::class, 'productDetails'])->name('ecom.productDetails');
 });
 
-Route::group(['prefix' => '/category'], function(){
-   Route::get('/', [CategoriesController::class, 'parentCategoryItem'])->name('category.allItem');
-   Route::get('/{id}',[CategoriesController::class, 'childCategoryItem'])->name('category.childItem');
+Route::group(['prefix' => '/category'], function () {
+    Route::get('/', [CategoriesController::class, 'parentCategoryItem'])->name('category.allItem');
+    Route::get('/{id}', [CategoriesController::class, 'childCategoryItem'])->name('category.childItem');
 });
 
 /*
@@ -72,6 +73,24 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
         Route::post('edit/{id}', [ProductController::class, 'update'])->name('product.update');
         Route::post('destroy/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
+    });
+    //    division routes
+    Route::group(['prefix' => '/division'], function () {
+        Route::get('/manage', [DivisionController::class, 'index'])->name('division.manage');
+        Route::get('/create', [DivisionController::class, 'create'])->name('division.create');
+        Route::post('/store', [DivisionController::class, 'store'])->name('division.store');
+        Route::get('/edit/{id}', [DivisionController::class, 'edit'])->name('division.edit');
+        Route::post('edit/{id}', [DivisionController::class, 'update'])->name('division.update');
+        Route::post('destroy/{id}', [DivisionController::class, 'destroy'])->name('division.destroy');
+    });
+    //    division routes
+    Route::group(['prefix' => '/district'], function () {
+        Route::get('/manage', [DistrictController::class, 'index'])->name('district.manage');
+        Route::get('/create', [DistrictController::class, 'create'])->name('district.create');
+        Route::post('/store', [DistrictController::class, 'store'])->name('district.store');
+        Route::get('/edit/{id}', [DistrictController::class, 'edit'])->name('district.edit');
+        Route::post('edit/{id}', [DistrictController::class, 'update'])->name('district.update');
+        Route::post('destroy/{id}', [DistrictController::class, 'destroy'])->name('district.destroy');
     });
 
 });

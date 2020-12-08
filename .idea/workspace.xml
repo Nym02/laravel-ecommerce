@@ -20,22 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/categories/category_products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac55ad0f5d0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac55adc4523.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac56b31dedb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac56b356ec3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fac56b384005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fad514a71e71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fad514b0e601.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/products/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/CategoriesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +162,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ecom/resources/views/Backend/pages/brands" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -222,7 +211,15 @@
       <workItem from="1605364982179" duration="4599000" />
       <workItem from="1605451667769" duration="14567000" />
       <workItem from="1605808119088" duration="5832000" />
-      <workItem from="1605860247392" duration="14680000" />
+      <workItem from="1605860247392" duration="16052000" />
+      <workItem from="1605977180001" duration="1832000" />
+      <workItem from="1606509333400" duration="149000" />
+      <workItem from="1606753775587" duration="1781000" />
+      <workItem from="1606756388414" duration="1836000" />
+      <workItem from="1607171294769" duration="596000" />
+      <workItem from="1607210711390" duration="30000" />
+      <workItem from="1607271644052" duration="798000" />
+      <workItem from="1607445154865" duration="3885000" />
     </task>
     <servers />
   </component>
@@ -257,9 +254,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="201" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602087469756" />
-    <state x="465" y="11" key="SettingsEditor" timestamp="1605025689466">
+    <state x="465" y="11" width="1431" height="946" key="SettingsEditor" timestamp="1606757859449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="465" y="11" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605025689466" />
+    <state x="465" y="11" width="1431" height="946" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606757859449" />
   </component>
 </project>
