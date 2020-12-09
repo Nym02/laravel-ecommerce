@@ -98,6 +98,58 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class="nav-header">Location Management</li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Division
+                            <i class="fas fa-angle-left right"></i>
+{{--                            <span class="badge badge-info right">6</span>--}}
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('division.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create Division</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('division.manage') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Division</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            District
+                            <i class="fas fa-angle-left right"></i>
+                            {{--                            <span class="badge badge-info right">6</span>--}}
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('district.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create District</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('district.manage') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Districts</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

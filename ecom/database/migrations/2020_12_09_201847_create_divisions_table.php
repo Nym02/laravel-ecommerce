@@ -14,7 +14,9 @@ class CreateDivisionsTable extends Migration
     public function up()
     {
         Schema::create('divisions', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('division_name');
+            $table->unsignedInteger('division_priority')->default(1);
             $table->timestamps();
         });
     }
