@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Backend\Divisions;
 use Illuminate\Http\Request;
+use App\Models\Backend\Divisions;
+use App\Models\Backend\District;
 
 class DivisionController extends Controller
 {
@@ -121,6 +122,13 @@ class DivisionController extends Controller
     public function destroy($id)
     {
        $division = Divisions::find($id);
+//        $districts = District::where('division_id', $division->id)->get();
+//
+//        foreach ($districts as $district){
+//            $district->delete();
+//        }
+
+
 
        if(!is_null($division)){
            $division->delete();

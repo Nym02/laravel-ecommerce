@@ -20,21 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/manage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/division/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/division/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/division/manage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/DistrictController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/DistrictController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/DivisionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/DivisionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Models/Backend/District.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Models/Backend/Division.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_12_08_165808_create_districts_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_12_08_171322_create_divisions_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Models/Backend/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Models/Backend/District.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/district/manage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/division/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/division/manage.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +225,8 @@
       <workItem from="1607210711390" duration="30000" />
       <workItem from="1607271644052" duration="798000" />
       <workItem from="1607445154865" duration="4563000" />
-      <workItem from="1607505437118" duration="10877000" />
+      <workItem from="1607505437118" duration="10969000" />
+      <workItem from="1607626117813" duration="5636000" />
     </task>
     <servers />
   </component>

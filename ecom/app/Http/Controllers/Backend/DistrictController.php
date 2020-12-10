@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\District;
+use App\Models\Backend\Divisions;
 use Illuminate\Http\Request;
 
 class DistrictController extends Controller
@@ -14,7 +16,8 @@ class DistrictController extends Controller
      */
     public function index()
     {
-        //
+        $districts = District::orderBy('district_name', 'asc')->get();
+        return view('Backend.pages.district.manage', compact('districts'));
     }
 
     /**
@@ -24,7 +27,8 @@ class DistrictController extends Controller
      */
     public function create()
     {
-        //
+        $divisions = Divisions::orderBy('division_priority', 'asc')->get();
+        return view('Backend.pages.district.create', compact('divisions'));
     }
 
     /**
@@ -33,9 +37,24 @@ class DistrictController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
-        //
+        $req->validate([
+            'districtName' => 'required | max:255',
+            'divisionName' => 'required | max:255'
+        ],
+        [
+            'districtName.required' => 'District Name can not be empty',
+            'divisionName.required' => 'Division Name can not be empty'
+        ]);
+
+        $district = new District();
+        $district->district_name = $req->districtName;
+        $district->division_id = $req->divisionName;
+
+        $district->save();
+
+        return redirect()->route('district.manage');
     }
 
     /**
@@ -57,7 +76,14 @@ class DistrictController extends Controller
      */
     public function edit($id)
     {
-        //
+        $district = District::find($id);
+        $divisions = Divisions::orderBy('division_priority', 'asc')->get();
+
+        if(!is_null($district)){
+            return view('Backend.pages.district.edit', compact('district','divisions'));
+        } else{
+            return redirect()->route('district.manage');
+        }
     }
 
     /**
@@ -67,9 +93,24 @@ class DistrictController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $req, $id)
     {
-        //
+        $req->validate([
+            'districtName' => 'required | max:255',
+            'divisionName' => 'required | max:255'
+        ],
+            [
+                'districtName.required' => 'District Name can not be empty',
+                'divisionName.required' => 'Division Name can not be empty'
+            ]);
+
+        $district = District::find($id);
+        $district->district_name = $req->districtName;
+        $district->division_id = $req->divisionName;
+
+        $district->save();
+
+        return redirect()->route('district.manage');
     }
 
     /**
@@ -80,6 +121,13 @@ class DistrictController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $district = District::find($id);
+
+        if(!is_null($district)){
+            $district->delete();
+            return redirect()->route('district.manage');
+        } else{
+            return redirect()->route('district.manage');
+        }
     }
 }

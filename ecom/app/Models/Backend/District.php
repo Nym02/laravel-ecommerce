@@ -10,6 +10,6 @@ class District extends Model
     use HasFactory;
 
     public function division(){
-        return $this->hasOne(Divisions::class);
+        return $this->belongsTo(Divisions::class);
     }
 }
