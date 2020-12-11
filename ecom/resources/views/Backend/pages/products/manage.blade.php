@@ -68,7 +68,9 @@
 
                                                 @foreach($product->productImage as $productImg)
 
-                                                        <img src="{{ asset('Backend/img/products/' . $productImg->product_image) }}" alt="" width="35">
+                                                    <img
+                                                        src="{{ asset('Backend/img/products/' . $productImg->product_image) }}"
+                                                        alt="" width="35">
 
                                                     @php
                                                         break;
@@ -81,7 +83,7 @@
                                             <td>{{ $product->product_description }}</td>
                                             <td>{{ $product->productBrand->name }}</td>
                                             <td>{{ $product->productCategory->cat_name }}</td>
-                                            <td>{{ $product->quantity }}</td>
+                                            <td>{{ $product->product_quantity }}</td>
                                             <td>BDT {{ $product->product_price }}</td>
                                             <td>{{ $product->product_offer_price }}</td>
                                             <td>

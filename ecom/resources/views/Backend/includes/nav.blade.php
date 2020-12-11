@@ -72,6 +72,7 @@
                                 <p>Manage Categories</p>
                             </a>
                         </li>
+
                     </ul>
                 </li>
                 <li class="nav-item">

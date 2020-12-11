@@ -33,7 +33,6 @@ class ProductController extends Controller
     public function create()
     {
         $productCategory = Category::orderBy('cat_name', 'asc')->where('parent_id', 0)->get();
-//        $productSubCategory = Category:: orderBy('cat_name', 'asc')->where('parent_id', 'id')->get();
         $productBrand = brands::orderBy('name', 'asc')->get();
         return view('Backend.pages.products.create', compact('productCategory', 'productBrand'));
     }
@@ -62,7 +61,7 @@ class ProductController extends Controller
         $product->product_slug = Str::slug($request->productTitle);
         $product->product_brand_id = $request->productBrand;
         $product->product_category_id = $request->productCategory;
-        $product->quantity = $request->productQuantity;
+        $product->product_quantity = $request->productQuantity;
         $product->product_price = $request->productRegularPrice;
         $product->product_offer_price = $request->productOfferPrice;
         $product->product_status = $request->productStatus;
@@ -136,7 +135,7 @@ class ProductController extends Controller
         $product->product_slug = Str::slug($request->productTitle);
         $product->product_brand_id = $request->productBrand;
         $product->product_category_id = $request->productCategory;
-        $product->quantity = $request->productQuantity;
+        $product->product_quantity = $request->productQuantity;
         $product->product_price = $request->productRegularPrice;
         $product->product_offer_price = $request->productOfferPrice;
         $product->product_status = $request->productStatus;
@@ -155,7 +154,13 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+        $productImg = ProductImage::where('product_id', $product->id)->get();
         if(!is_null($product)){
+           foreach ($productImg as $pImg){
+               if(File::exists('Backend/img/products/' . $pImg->product_image)){
+                   File::delete('Backend/img/products/' . $pImg->product_image);
+               }
+           }
             $product->delete();
             return redirect()->route('product.manage');
         } else {

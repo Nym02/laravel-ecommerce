@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('product_slug');
             $table->integer('product_brand_id');
             $table->integer('product_category_id');
-            $table->integer('quantity')->default(1);
+            $table->integer('product_quantity')->default(1);
             $table->integer('product_price');
             $table->integer('product_offer_price')->nullable();
             $table->integer('product_status')->default(0);
