@@ -55,7 +55,7 @@ class CategoryController extends Controller
             $image = $request->file('categoryLogo');
             $img = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('Backend/img/category/' . $img);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(300,300)->save($location);
             $category->cat_thumbnail = $img;
         }
 
@@ -122,7 +122,7 @@ class CategoryController extends Controller
             $image = $request->file('categoryLogo');
             $img = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('Backend/img/category/' . $img);
-            Image::make($image)->save($location);
+            Image::make($image)->resize(300,300)->save($location);
             $category->cat_thumbnail = $img;
         }
         $category->save();

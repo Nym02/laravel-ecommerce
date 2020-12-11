@@ -71,7 +71,7 @@ class ProductController extends Controller
             foreach ($request->productThumbnail as $productImg) {
                 $img = uniqid() . "." . $productImg->getClientOriginalExtension();
                 $location = public_path('Backend/img/products/' . $img);
-                Image::make($productImg)->save($location);
+                Image::make($productImg)->resize(700,700)->save($location);
 
                 $p_img = new ProductImage();
                 $p_img->product_id = $product->id;

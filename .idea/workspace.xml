@@ -23,15 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_161128_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_161128_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_170548_create_product_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_170548_create_product_images_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb7fbbeae59b.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb7fbbeae59b.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb7fbbf28656.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb7fbbf28656.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb8033071f78.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb8033071f78.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb803308819d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/public/Backend/img/products/5fb803308819d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/categories/manage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/manage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/manage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/category/1602950826.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/public/Backend/img/category/1602961857.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +224,7 @@
       <workItem from="1607445154865" duration="4563000" />
       <workItem from="1607505437118" duration="10969000" />
       <workItem from="1607626117813" duration="5797000" />
-      <workItem from="1607685770807" duration="9926000" />
+      <workItem from="1607685770807" duration="11368000" />
     </task>
     <servers />
   </component>
