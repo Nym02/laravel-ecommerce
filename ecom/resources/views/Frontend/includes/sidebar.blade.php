@@ -5,7 +5,8 @@
         <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Categories</div>
         <nav class="yamm megamenu-horizontal">
             <ul class="nav">
-                @foreach(App\Models\Backend\Category::orderBy('id', 'desc')->where('parent_id', 0)->get() as $parentCategory)
+                @foreach(App\Models\Backend\Category::orderBy('id', 'desc')->where('parent_id', 0)->get() as
+                $parentCategory)
                 <li class="dropdown menu-item"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="icon fa fa-shopping-bag" aria-hidden="true"></i>{{ $parentCategory->cat_name }}</a>
                     <ul class="dropdown-menu mega-menu">
@@ -13,8 +14,11 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-3">
                                     <ul class="links list-unstyled">
-                                        @foreach(App\Models\Backend\Category::orderBy('id', 'desc')->where('parent_id', $parentCategory->id)->get() as $childCategory)
-                                        <li><a href="{{ route('category.childItem', $childCategory->id) }}">{{ $childCategory->cat_name }}</a></li>
+                                        @foreach(App\Models\Backend\Category::orderBy('id', 'desc')->where('parent_id',
+                                        $parentCategory->id)->get() as $childCategory)
+                                        <li><a
+                                                href="{{ route('category.childItem', $childCategory->id) }}">{{ $childCategory->cat_name }}</a>
+                                        </li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -26,7 +30,7 @@
                     </ul>
                     <!-- /.dropdown-menu -->
                 </li>
-            @endforeach
+                @endforeach
                 <!-- /.menu-item -->
 
             </ul>
@@ -47,7 +51,7 @@
                         <div class="image"><img src="{{ asset('Frontend/assets/images/hot-deals/p25.jpg') }}" alt="">
                         </div>
                         <div class="sale-offer-tag"><span>49%<br>
-                    off</span></div>
+                                off</span></div>
                         <div class="timing-wrapper">
                             <div class="box-wrapper">
                                 <div class="date box"><span class="key">120</span> <span class="value">DAYS</span></div>
@@ -96,7 +100,7 @@
                         <div class="image"><img src="{{ asset('Frontend/assets/images/hot-deals/p5.jpg') }}" alt="">
                         </div>
                         <div class="sale-offer-tag"><span>35%<br>
-                    off</span></div>
+                                off</span></div>
                         <div class="timing-wrapper">
                             <div class="box-wrapper">
                                 <div class="date box"><span class="key">120</span> <span class="value">Days</span></div>
@@ -145,7 +149,7 @@
                         <div class="image"><img src="{{ asset('Frontend/assets/images/hot-deals/p10.jpg') }}" alt="">
                         </div>
                         <div class="sale-offer-tag"><span>35%<br>
-                    off</span></div>
+                                off</span></div>
                         <div class="timing-wrapper">
                             <div class="box-wrapper">
                                 <div class="date box"><span class="key">120</span> <span class="value">Days</span></div>
@@ -491,15 +495,13 @@
         <h3 class="section-title">Product tags</h3>
         <div class="sidebar-widget-body outer-top-xs">
             <div class="tag-list"><a class="item" title="Phone" href="category.html">Phone</a> <a class="item active"
-                                                                                                  title="Vest"
-                                                                                                  href="category.html">Vest</a>
+                    title="Vest" href="category.html">Vest</a>
                 <a class="item" title="Smartphone" href="category.html">Smartphone</a> <a class="item" title="Furniture"
-                                                                                          href="category.html">Furniture</a>
+                    href="category.html">Furniture</a>
                 <a class="item" title="T-shirt" href="category.html">T-shirt</a> <a class="item" title="Sweatpants"
-                                                                                    href="category.html">Sweatpants</a>
+                    href="category.html">Sweatpants</a>
                 <a class="item" title="Sneaker" href="category.html">Sneaker</a> <a class="item" title="Toys"
-                                                                                    href="category.html">Toys</a> <a
-                    class="item" title="Rose" href="category.html">Rose</a></div>
+                    href="category.html">Toys</a> <a class="item" title="Rose" href="category.html">Rose</a></div>
             <!-- /.tag-list -->
         </div>
         <!-- /.sidebar-widget-body -->
@@ -812,7 +814,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1"
-                           placeholder="Subscribe to our newsletter">
+                        placeholder="Subscribe to our newsletter">
                 </div>
                 <button class="btn btn-primary">Subscribe</button>
             </form>
@@ -827,7 +829,7 @@
         <div id="advertisement" class="advertisement">
             <div class="item">
                 <div class="avatar"><img src="{{ asset('Frontend/assets/images/testimonials/member1.png') }}"
-                                         alt="Image"></div>
+                        alt="Image"></div>
                 <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime
                     tum metus eud molest sed consectetuer.<em>"</em></div>
                 <div class="clients_author">John Doe <span>Abc Company</span></div>
@@ -837,7 +839,7 @@
 
             <div class="item">
                 <div class="avatar"><img src="{{ asset('Frontend/assets/images/testimonials/member3.png') }}"
-                                         alt="Image"></div>
+                        alt="Image"></div>
                 <div class="testimonials"><em>"</em>Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime
                     tum metus eud molest sed consectetuer.<em>"</em></div>
                 <div class="clients_author">Stephen Doe <span>Xperia Designs</span></div>
@@ -846,7 +848,7 @@
 
             <div class="item">
                 <div class="avatar"><img src="{{ asset('Frontend/assets/images/testimonials/member2.png') }}"
-                                         alt="Image"></div>
+                        alt="Image"></div>
                 <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port mollis. Nunc condime
                     tum metus eud molest sed consectetuer.<em>"</em></div>
                 <div class="clients_author">Saraha Smith <span>Datsun &amp; Co</span></div>

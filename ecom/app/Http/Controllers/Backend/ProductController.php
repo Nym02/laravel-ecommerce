@@ -50,38 +50,39 @@ class ProductController extends Controller
             'productTitle' => 'required | max:255',
             'productRegularPrice' => 'required | numeric'
         ], [
-                'productTitle.required' => 'Please provide product title',
-                'productRegularPrice.required' => 'Please provide product price',
-            ]);
+            'productTitle.required' => 'Please provide product title',
+            'productRegularPrice.required' => 'Please provide product price',
+        ]);
 
         $product = new Product();
 
         $product->product_title = $request->productTitle;
-        $product->product_description = $request->productDescription;
-        $product->product_slug = Str::slug($request->productTitle);
-        $product->product_brand_id = $request->productBrand;
-        $product->product_category_id = $request->productCategory;
-        $product->product_quantity = $request->productQuantity;
         $product->product_price = $request->productRegularPrice;
+        $product->product_category_id = $request->productCategory;
+        $product->product_brand_id = $request->productBrand;
         $product->product_offer_price = $request->productOfferPrice;
+        $product->product_slug = Str::slug($request->productTitle);
+        $product->product_quantity = $request->productQuantity;
         $product->product_status = $request->productStatus;
+        $product->is_featured = $request->isFeatured;
+        $product->productTags = $request->product_tag;
+        $product->shortDescription = $request->product_shortDescription;
+        $product->product_description = $request->productDescription;
         $product->save();
 
         if (count($request->productThumbnail) > 0) {
             foreach ($request->productThumbnail as $productImg) {
                 $img = uniqid() . "." . $productImg->getClientOriginalExtension();
                 $location = public_path('Backend/img/products/' . $img);
-                Image::make($productImg)->resize(700,700)->save($location);
+                Image::make($productImg)->resize(700, 700)->save($location);
 
                 $p_img = new ProductImage();
                 $p_img->product_id = $product->id;
                 $p_img->product_image = $img;
                 $p_img->save();
-
             }
         }
         return redirect()->route('product.manage');
-
     }
 
     /**
@@ -106,8 +107,8 @@ class ProductController extends Controller
         $productCategory = Category::orderBy('cat_name', 'asc')->where('parent_id', 0)->get();
         $productBrand = brands::orderBy('name', 'asc')->get();
         $editProduct = Product::find($id);
-        if(!is_null($editProduct)){
-            return view('Backend.pages.products.edit', compact('editProduct','productCategory','productBrand'));
+        if (!is_null($editProduct)) {
+            return view('Backend.pages.products.edit', compact('editProduct', 'productCategory', 'productBrand'));
         }
     }
 
@@ -131,14 +132,17 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         $product->product_title = $request->productTitle;
-        $product->product_description = $request->productDescription;
-        $product->product_slug = Str::slug($request->productTitle);
-        $product->product_brand_id = $request->productBrand;
-        $product->product_category_id = $request->productCategory;
-        $product->product_quantity = $request->productQuantity;
         $product->product_price = $request->productRegularPrice;
+        $product->product_category_id = $request->productCategory;
+        $product->product_brand_id = $request->productBrand;
         $product->product_offer_price = $request->productOfferPrice;
+        $product->product_slug = Str::slug($request->productTitle);
+        $product->product_quantity = $request->productQuantity;
         $product->product_status = $request->productStatus;
+        $product->is_featured = $request->isFeatured;
+        $product->productTags = $request->product_tag;
+        $product->shortDescription = $request->product_shortDescription;
+        $product->product_description = $request->productDescription;
         $product->save();
 
 
@@ -155,17 +159,16 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $productImg = ProductImage::where('product_id', $product->id)->get();
-        if(!is_null($product)){
-           foreach ($productImg as $pImg){
-               if(File::exists('Backend/img/products/' . $pImg->product_image)){
-                   File::delete('Backend/img/products/' . $pImg->product_image);
-               }
-           }
+        if (!is_null($product)) {
+            foreach ($productImg as $pImg) {
+                if (File::exists('Backend/img/products/' . $pImg->product_image)) {
+                    File::delete('Backend/img/products/' . $pImg->product_image);
+                }
+            }
             $product->delete();
             return redirect()->route('product.manage');
         } else {
             return redirect()->route('product.manage');
         }
-
     }
 }

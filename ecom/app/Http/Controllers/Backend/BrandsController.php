@@ -18,7 +18,7 @@ class BrandsController extends Controller
      */
     public function index()
     {
-        $brands = brands::orderBy('name','asc')->get();
+        $brands = brands::orderBy('name', 'asc')->get();
         return view('Backend.pages.brands.manage', compact('brands'));
     }
 
@@ -42,16 +42,16 @@ class BrandsController extends Controller
     {
         //
         $request->validate([
-            'brandName'=> 'required|max:255'
-        ],[
+            'brandName' => 'required|max:255'
+        ], [
             'brandName.required' => 'Please provide your name'
         ]);
 
         $brand = new brands();
-        $brand->name= $request->brandName;
-        $brand->desc= $request->brandDesc;
+        $brand->name = $request->brandName;
+        $brand->desc = $request->brandDesc;
 
-        if($request->brandLogo){
+        if ($request->brandLogo) {
             $image = $request->file('brandLogo');
             $img = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('Backend/img/Brands/' . $img);
@@ -59,8 +59,12 @@ class BrandsController extends Controller
             $brand->image = $img;
         }
         $brand->save();
-        return redirect()->route('brands.manage');
 
+        $notification = array(
+            "message" => "New Brand Added Successfully",
+            "alert-type" => "success"
+        );
+        return redirect()->route('brands.manage')->with($notification);
     }
 
     /**
@@ -84,12 +88,11 @@ class BrandsController extends Controller
     {
         $brand = brands::find($id);
 
-        if(!is_null($brand)){
+        if (!is_null($brand)) {
             return view('Backend.pages.brands.edit', compact('brand'));
-        } else{
+        } else {
             return route('brands.manage');
         }
-
     }
 
     /**
@@ -103,17 +106,17 @@ class BrandsController extends Controller
     {
         //
         $request->validate([
-            'brandName'=> 'required|max:255'
-        ],[
+            'brandName' => 'required|max:255'
+        ], [
             'brandName.required' => 'Please provide your name'
         ]);
 
         $brand = brands::find($id);
-        $brand->name= $request->brandName;
-        $brand->desc= $request->brandDesc;
+        $brand->name = $request->brandName;
+        $brand->desc = $request->brandDesc;
 
-        if($request->brandLogo){
-            if(File::exists('Backend/img/Brands/' . $brand->image)){
+        if ($request->brandLogo) {
+            if (File::exists('Backend/img/Brands/' . $brand->image)) {
                 File::delete('Backend/img/Brands/' . $brand->image);
             }
             $image = $request->file('brandLogo');
@@ -123,7 +126,11 @@ class BrandsController extends Controller
             $brand->image = $img;
         }
         $brand->save();
-        return redirect()->route('brands.manage');
+        $notification = array(
+            "message" => "Brand info updated",
+            "alert-type" => "success"
+        );
+        return redirect()->route('brands.manage')->with($notification);
     }
 
     /**
@@ -136,13 +143,13 @@ class BrandsController extends Controller
     {
         $brand = brands::find($id);
 
-        if(!is_null($brand)){
-            if(File::exists('Backend/img/Brands/' . $brand->image)){
+        if (!is_null($brand)) {
+            if (File::exists('Backend/img/Brands/' . $brand->image)) {
                 File::delete('Backend/img/Brands/' . $brand->image);
             }
             $brand->delete();
             return redirect()->route('brands.manage');
-        } else{
+        } else {
             return redirect()->route('brands.manage');
         }
     }
