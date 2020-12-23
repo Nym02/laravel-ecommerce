@@ -10,10 +10,8 @@ class brands extends Model
     use HasFactory;
 
     public $fillable = [
-        'brandName',
-        'brandDesc',
-        'brandLogo'
+        'name',
+        'desc',
+        'image'
     ];
-
-
 }

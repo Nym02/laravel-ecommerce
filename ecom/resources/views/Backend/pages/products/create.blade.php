@@ -106,22 +106,23 @@
                                         <div class="form-group">
                                             <label for="">Is Featured?</label>
                                             <select name="isFeatured" id="" class="form-control">
+                                                <option value="">Select Featured Status</option>
                                                 <option value="1">Yes</option>
                                                 <option value="0">No</option>
 
                                             </select>
                                         </div>
-
-
-
-
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-xl-6 col-sm-12 col-12">
                                         <div class="form-group">
                                             <label for="">Product Tags</label>
                                             <input type="text" class="form-control" name="productTags"
                                                 placeholder="Enter Product Tag">
                                         </div>
+
+
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-xl-6 col-sm-12 col-12">
+
                                         <div class="form-group">
                                             <label for="">Short Description</label>
                                             <textarea name="shortDescription" class="form-control"
@@ -133,48 +134,53 @@
                                                 placeholder="Product Description" id="" cols="30" rows="6"></textarea>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="">Product Main Thumbnail</label>
-                                            <input type="file" class="form-control-file" name="productThumbnail[]"
-                                                id="exampleFormControlFile1">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <div class="form-group">
-                                                    <label for="">Image 2</label>
-                                                    <input type="file" class="form-control-file"
-                                                        name="productThumbnail[]" id="exampleFormControlFile1">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <div class="form-group">
-                                                    <label for="">Image 3</label>
-                                                    <input type="file" class="form-control-file"
-                                                        name="productThumbnail[]" id="exampleFormControlFile1">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <div class="form-group">
-                                                    <label for="">Image 4</label>
-                                                    <input type="file" class="form-control-file"
-                                                        name="productThumbnail[]" id="exampleFormControlFile1">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                <div class="form-group">
-                                                    <label for="">Image 5</label>
-                                                    <input type="file" class="form-control-file"
-                                                        name="productThumbnail[]" id="exampleFormControlFile1">
-                                                </div>
-                                            </div>
-                                        </div>
 
 
-                                        <button type="submit" class="btn btn-primary d-inline-block">Add New Product
-                                        </button>
+
+
+
                                     </div>
-                                </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <label for="">Product Main Thumbnail</label>
+                                                <input type="file" class="form-control-file" name="productThumbnail[]"
+                                                    id="exampleFormControlFile1">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <label for="">Image 2</label>
+                                                <input type="file" class="form-control-file" name="productThumbnail[]"
+                                                    id="exampleFormControlFile1">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <label for="">Image 3</label>
+                                                <input type="file" class="form-control-file" name="productThumbnail[]"
+                                                    id="exampleFormControlFile1">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <label for="">Image 4</label>
+                                                <input type="file" class="form-control-file" name="productThumbnail[]"
+                                                    id="exampleFormControlFile1">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <label for="">Image 5</label>
+                                                <input type="file" class="form-control-file" name="productThumbnail[]"
+                                                    id="exampleFormControlFile1">
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                </div>
+                                <button type="submit" class="btn btn-primary d-inline-block">Add New Product
+                                </button>
                             </form>
                         </div>
                         <!-- /.card-body -->

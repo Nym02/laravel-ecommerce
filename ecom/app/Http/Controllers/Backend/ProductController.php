@@ -65,8 +65,8 @@ class ProductController extends Controller
         $product->product_quantity = $request->productQuantity;
         $product->product_status = $request->productStatus;
         $product->is_featured = $request->isFeatured;
-        $product->productTags = $request->product_tag;
-        $product->shortDescription = $request->product_shortDescription;
+        $product->product_tag = $request->productTags;
+        $product->product_shortDescription = $request->shortDescription;
         $product->product_description = $request->productDescription;
         $product->save();
 
@@ -140,8 +140,8 @@ class ProductController extends Controller
         $product->product_quantity = $request->productQuantity;
         $product->product_status = $request->productStatus;
         $product->is_featured = $request->isFeatured;
-        $product->productTags = $request->product_tag;
-        $product->shortDescription = $request->product_shortDescription;
+        $product->product_tag = $request->productTags;
+        $product->product_shortDescription = $request->shortDescription;
         $product->product_description = $request->productDescription;
         $product->save();
 

@@ -25,6 +25,12 @@
     integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
     crossorigin="anonymous"></script>
 
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'shortDescription' );
+    CKEDITOR.replace( 'productDescription' );
+</script>
+
 
 <script>
     @if(Session::has('message'))
