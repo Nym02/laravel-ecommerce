@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Image;
 use File;
+use phpDocumentor\Reflection\Types\Null_;
 
 class ProductController extends Controller
 {
@@ -130,6 +131,7 @@ class ProductController extends Controller
         ]);
 
         $product = Product::find($id);
+        $productImg = ProductImage::where('product_id', $product->id)->get();
 
         $product->product_title = $request->productTitle;
         $product->product_price = $request->productRegularPrice;
@@ -145,6 +147,28 @@ class ProductController extends Controller
         $product->product_description = $request->productDescription;
         $product->save();
 
+
+
+
+        if (count($request->productThumbnail) > 0) {
+
+            foreach ($productImg as $pImg) {
+                if (File::exists('Backend/img/products/' . $pImg->product_image)) {
+                    File::delete('Backend/img/products/' . $pImg->product_image);
+                }
+                $pImg->delete();
+            }
+            foreach ($request->productThumbnail as $productImg) {
+                $img = uniqid() . "." . $productImg->getClientOriginalExtension();
+                $location = public_path('Backend/img/products/' . $img);
+                Image::make($productImg)->resize(700, 700)->save($location);
+
+                $p_img = new ProductImage();
+                $p_img->product_id = $product->id;
+                $p_img->product_image = $img;
+                $p_img->save();
+            }
+        }
 
         return redirect()->route('product.manage');
     }
