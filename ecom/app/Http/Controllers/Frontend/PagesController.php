@@ -15,8 +15,9 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $newProducts = Product::orderBy('id','desc')->get();
-        return view('Frontend.pages.home', compact('newProducts'));
+        $newProducts = Product::orderBy('id', 'desc')->get();
+        $featureProducts = Product::orderBy('id', 'desc')->where('is_featured', 1)->get()->take(6);
+        return view('Frontend.pages.home', compact('newProducts', 'featureProducts'));
     }
 
     /**
@@ -29,7 +30,8 @@ class PagesController extends Controller
         return view('Frontend.pages.products.products');
     }
 
-    public function productDetails(){
+    public function productDetails()
+    {
         return view('Frontend.pages.products.details');
     }
 

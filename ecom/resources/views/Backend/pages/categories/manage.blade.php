@@ -49,6 +49,7 @@
                                         <th scope="col">Category Name</th>
                                         <th scope="col">Category Description</th>
                                         <th scope="col">Parent Category</th>
+                                        <th scope="col">Is Featured?</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -80,6 +81,14 @@
                                             @endif
 
                                             @endif
+                                        </td>
+                                        <td>
+                                            @if($cat->cat_featured == 0)
+                                            <span class="badge badge-danger">No</span>
+                                            @else
+                                            <span class="badge badge-primary">Yes</span>
+                                            @endif
+                                        </td>
                                         <td>
                                             <div class="btn-group">
                                                 @if($cat->parent_id == 0)

@@ -71,18 +71,18 @@ class ProductController extends Controller
         $product->product_description = $request->productDescription;
         $product->save();
 
-        if (count($request->productThumbnail) > 0) {
-            foreach ($request->productThumbnail as $productImg) {
-                $img = uniqid() . "." . $productImg->getClientOriginalExtension();
-                $location = public_path('Backend/img/products/' . $img);
-                Image::make($productImg)->resize(700, 700)->save($location);
+        // if (count($request->productThumbnail) > 0) {
+        //     foreach ($request->productThumbnail as $productImg) {
+        //         $img = uniqid() . "." . $productImg->getClientOriginalExtension();
+        //         $location = public_path('Backend/img/products/' . $img);
+        //         Image::make($productImg)->resize(700, 700)->save($location);
 
-                $p_img = new ProductImage();
-                $p_img->product_id = $product->id;
-                $p_img->product_image = $img;
-                $p_img->save();
-            }
-        }
+        //         $p_img = new ProductImage();
+        //         $p_img->product_id = $product->id;
+        //         $p_img->product_image = $img;
+        //         $p_img->save();
+        //     }
+        // }
         return redirect()->route('product.manage');
     }
 
@@ -150,25 +150,25 @@ class ProductController extends Controller
 
 
 
-        if (count($request->productThumbnail) > 0) {
+        // if (count($request->productThumbnail) > 0) {
 
-            foreach ($productImg as $pImg) {
-                if (File::exists('Backend/img/products/' . $pImg->product_image)) {
-                    File::delete('Backend/img/products/' . $pImg->product_image);
-                }
-                $pImg->delete();
-            }
-            foreach ($request->productThumbnail as $productImg) {
-                $img = uniqid() . "." . $productImg->getClientOriginalExtension();
-                $location = public_path('Backend/img/products/' . $img);
-                Image::make($productImg)->resize(700, 700)->save($location);
+        //     foreach ($productImg as $pImg) {
+        //         if (File::exists('Backend/img/products/' . $pImg->product_image)) {
+        //             File::delete('Backend/img/products/' . $pImg->product_image);
+        //         }
+        //         $pImg->delete();
+        //     }
+        //     foreach ($request->productThumbnail as $productImg) {
+        //         $img = uniqid() . "." . $productImg->getClientOriginalExtension();
+        //         $location = public_path('Backend/img/products/' . $img);
+        //         Image::make($productImg)->resize(700, 700)->save($location);
 
-                $p_img = new ProductImage();
-                $p_img->product_id = $product->id;
-                $p_img->product_image = $img;
-                $p_img->save();
-            }
-        }
+        //         $p_img = new ProductImage();
+        //         $p_img->product_id = $product->id;
+        //         $p_img->product_image = $img;
+        //         $p_img->save();
+        //     }
+        // }
 
         return redirect()->route('product.manage');
     }

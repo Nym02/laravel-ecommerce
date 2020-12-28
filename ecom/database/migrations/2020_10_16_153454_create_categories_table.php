@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->text('cat_description')->nullable();
             $table->string('cat_thumbnail')->nullable();
             $table->integer('parent_id')->default(0);
+            $table->integer('cat_featured')->default(0);
             $table->timestamps();
         });
     }
