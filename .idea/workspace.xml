@@ -21,16 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1ce72edf-a9e0-4cf5-8de7-7eb397f7bbcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/BrandsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Backend/BrandsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Controllers/Frontend/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/app/Models/Backend/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Models/Backend/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_161128_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_161128_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_170548_create_product_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/database/migrations/2020_11_10_170548_create_product_images_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/css.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/includes/script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Backend/pages/products/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/categories/category_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/pages/categories/category_products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/resources/views/Frontend/includes/topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +227,8 @@
       <workItem from="1607685770807" duration="12107000" />
       <workItem from="1607761938507" duration="1819000" />
       <workItem from="1608635786881" duration="81000" />
+      <workItem from="1609950620533" duration="3000" />
+      <workItem from="1610128206943" duration="130000" />
     </task>
     <servers />
   </component>
