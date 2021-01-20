@@ -7,13 +7,14 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\DistrictController;
 use App\Http\Controllers\Backend\DivisionController;
-
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\CategoriesController;
 
 
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Models\Frontend\Cart;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,16 @@ Route::group(['prefix' => '/products'], function () {
 Route::group(['prefix' => '/category'], function () {
     Route::get('/', [CategoriesController::class, 'parentCategoryItem'])->name('category.allItem');
     Route::get('/{id}', [CategoriesController::class, 'childCategoryItem'])->name('category.childItem');
+});
+
+
+//Cart Routes 
+
+Route::group(['prefix' => 'cart'], function () {
+    Route::get('/', [CartController::class, 'index'])->name('cart.show');
+    Route::post('/store', [CartController::class, 'store'])->name('cart.store');
+    Route::post('/update/{id}', [CartController::class, 'update'])->name('cart.update');
+    Route::post('/destroy/{id}', [CartController::class, 'destroy'])->name('cart.destroy');
 });
 
 /*

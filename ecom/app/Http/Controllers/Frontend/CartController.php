@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Frontend\Cart;
+use App\Models\Frontend\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -14,7 +18,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        return view('Frontend.pages.cart');
     }
 
     /**
@@ -35,7 +39,33 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'product_id' => 'required',
+
+        ], [
+            'product_id.required' => 'Please Choose Your Product'
+        ]);
+
+        if (Auth::check()) {
+            $cart = Cart::where('user_id', Auth::id())->where('product_id', $request->product_id)->first();
+        } else {
+            $cart = Cart::where('ip_address', $request->ip())->where('product_id', $request->product_id)->first();
+        }
+
+        if (!is_null($cart)) {
+            $cart->increment('product_quantity');
+            return redirect()->route('ecom.home');
+        } else {
+            $cart = new Cart();
+            if (Auth::check()) {
+                $cart->user_id = Auth::id();
+            }
+            $cart->ip_address = $request->ip();
+            $cart->product_id = $request->product_id;
+            $cart->save();
+
+            return redirect()->route('ecom.home');
+        }
     }
 
     /**
@@ -69,7 +99,13 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cart = Cart::find($id);
+        if (!is_null($cart)) {
+            $cart->product_quantity = $request->product_quantity;
+            $cart->save();
+        } else {
+            return redirect()->route('ecom.home');
+        }
     }
 
     /**
@@ -80,6 +116,11 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cart = Cart::find($id);
+        if (!is_null($cart)) {
+            $cart->delete();
+        } else {
+            return redirect()->route('ecom.home');
+        }
     }
 }

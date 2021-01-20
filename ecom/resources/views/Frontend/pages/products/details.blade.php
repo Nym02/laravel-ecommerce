@@ -598,8 +598,14 @@
                             </div>
 
                             <div class="col-sm-7">
-                                <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i>
-                                    ADD TO CART</a>
+                                <form action="{{ route('cart.store') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="product_id" value="{{ $productDetail->id }}">
+                                    <button type="submit" class="btn btn-primary"><i
+                                            class="fa fa-shopping-cart inner-right-vs"></i>
+                                        ADD TO CART</button>
+
+                                </form>
                             </div>
 
 
