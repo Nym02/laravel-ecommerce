@@ -18,7 +18,8 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view('Frontend.pages.cart');
+        $cart = Cart::orderBy('id', 'asc')->get();
+        return view('Frontend.pages.cart', compact('cart'));
     }
 
     /**

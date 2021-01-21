@@ -22,13 +22,14 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="cart-romove item">Remove</th>
+                                    <th>#SL</th>
                                     <th class="cart-description item">Image</th>
                                     <th class="cart-product-name item">Product Name</th>
-                                    <th class="cart-edit item">Edit</th>
                                     <th class="cart-qty item">Quantity</th>
                                     <th class="cart-sub-total item">Subtotal</th>
                                     <th class="cart-total last-item">Grandtotal</th>
+                                    <th class="cart-edit item">Update</th>
+                                    <th class="cart-romove item">Remove</th>
                                 </tr>
                             </thead><!-- /thead -->
                             <tfoot>
@@ -47,114 +48,65 @@
                                 </tr>
                             </tfoot>
                             <tbody>
+                                @php
+                                $i = 0;
+                                @endphp
+                                @foreach($cart as $cartItems)
+                                @php
+                                $i++;
+                                @endphp
                                 <tr>
-                                    <td class="romove-item"><a href="#" title="cancel" class="icon"><i
-                                                class="fa fa-trash-o"></i></a></td>
+                                    <td>{{ $i }}</td>
+
                                     <td class="cart-image">
                                         <a class="entry-thumbnail" href="detail.html">
                                             <img src="assets/images/products/p1.jpg" alt="">
                                         </a>
                                     </td>
                                     <td class="cart-product-name-info">
-                                        <h4 class="cart-product-description"><a href="detail.html">Floral Print
-                                                Buttoned</a></h4>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="rating rateit-small rateit"><button id="rateit-reset-2"
-                                                        data-role="none" class="rateit-reset" aria-label="reset rating"
-                                                        aria-controls="rateit-range-2" style="display: none;"></button>
-                                                    <div id="rateit-range-2" class="rateit-range" tabindex="0"
-                                                        role="slider" aria-label="rating" aria-owns="rateit-reset-2"
-                                                        aria-valuemin="0" aria-valuemax="5" aria-valuenow="4"
-                                                        aria-readonly="true" style="width: 70px; height: 14px;">
-                                                        <div class="rateit-selected" style="height: 14px; width: 56px;">
-                                                        </div>
-                                                        <div class="rateit-hover" style="height:14px"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="reviews">
-                                                    (06 Reviews)
-                                                </div>
-                                            </div>
-                                        </div><!-- /.row -->
+                                        <h4 class="cart-product-description"><a
+                                                href="detail.html">{{ $cartItems->product->product_title }}</a></h4>
                                         <div class="cart-product-info">
                                             <span class="product-color">COLOR:<span>Blue</span></span>
                                         </div>
                                     </td>
-                                    <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
+
                                     <td class="cart-product-quantity">
                                         <div class="quant-input">
-                                            <div class="arrows">
-                                                <div class="arrow plus gradient"><span class="ir"><i
-                                                            class="icon fa fa-sort-asc"></i></span></div>
-                                                <div class="arrow minus gradient"><span class="ir"><i
-                                                            class="icon fa fa-sort-desc"></i></span></div>
-                                            </div>
-                                            <input type="text" value="1">
+
+                                            <input type="text" value="{{ $cartItems->product_quantity }}">
                                         </div>
                                     </td>
-                                    <td class="cart-product-sub-total"><span class="cart-sub-total-price">$300.00</span>
+                                    <td class="cart-product-sub-total">
+                                        @if($cartItems->product->product_offer_price != NULL)
+                                        <span class="cart-sub-total-price">৳
+                                            {{ $cartItems->product->product_offer_price }}</span>
+                                        @elseif($cartItems->product->product_offer_price == NULL)
+                                        <span class="cart-sub-total-price">৳
+                                            {{ $cartItems->product->product_price }}</span>
+                                        @endif
+
                                     </td>
-                                    <td class="cart-product-grand-total"><span
-                                            class="cart-grand-total-price">$300.00</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="romove-item"><a href="#" title="cancel" class="icon"><i
-                                                class="fa fa-trash-o"></i></a></td>
-                                    <td class="cart-image">
-                                        <a class="entry-thumbnail" href="detail.html">
-                                            <img src="assets/images/products/p2.jpg" alt="">
+                                    <td class="cart-product-grand-total">
+                                        @if($cartItems->product->product_offer_price != NULL)
+                                        <span class="cart-sub-total-price">৳
+                                            {{ $cartItems->product->product_offer_price * $cartItems->product_quantity }}</span>
+                                        @elseif($cartItems->product->product_offer_price == NULL)
+                                        <span class="cart-sub-total-price">৳
+                                            {{ $cartItems->product->product_price * $cartItems->product_quantity }}</span>
+                                        @endif
+                                    </td>
+                                    <td class="cart-product-edit">
+                                        <a href="#" class="product-edit">Update</a>
+                                    </td>
+                                    <td class="romove-item">
+                                        <a href="#" title="cancel" class="icon">
+                                            <i class="fa fa-trash-o"></i>
                                         </a>
                                     </td>
-                                    <td class="cart-product-name-info">
-                                        <h4 class="cart-product-description"><a href="detail.html">Floral Print
-                                                Buttoned</a></h4>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="rating rateit-small rateit"><button id="rateit-reset-3"
-                                                        data-role="none" class="rateit-reset" aria-label="reset rating"
-                                                        aria-controls="rateit-range-3" style="display: none;"></button>
-                                                    <div id="rateit-range-3" class="rateit-range" tabindex="0"
-                                                        role="slider" aria-label="rating" aria-owns="rateit-reset-3"
-                                                        aria-valuemin="0" aria-valuemax="5" aria-valuenow="4"
-                                                        aria-readonly="true" style="width: 70px; height: 14px;">
-                                                        <div class="rateit-selected" style="height: 14px; width: 56px;">
-                                                        </div>
-                                                        <div class="rateit-hover" style="height:14px"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="reviews">
-                                                    (06 Reviews)
-                                                </div>
-                                            </div>
-                                        </div><!-- /.row -->
-                                        <div class="cart-product-info">
-                                            <span class="product-color">COLOR:<span>Pink</span></span>
-                                        </div>
-                                    </td>
-                                    <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
-                                    <td class="cart-product-quantity">
-                                        <div class="cart-quantity">
-                                            <div class="quant-input">
-                                                <div class="arrows">
-                                                    <div class="arrow plus gradient"><span class="ir"><i
-                                                                class="icon fa fa-sort-asc"></i></span></div>
-                                                    <div class="arrow minus gradient"><span class="ir"><i
-                                                                class="icon fa fa-sort-desc"></i></span></div>
-                                                </div>
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart-product-sub-total"><span class="cart-sub-total-price">$300.00</span>
-                                    </td>
-                                    <td class="cart-product-grand-total"><span
-                                            class="cart-grand-total-price">$300.00</span></td>
                                 </tr>
+                                @endforeach
+
                             </tbody><!-- /tbody -->
                         </table><!-- /table -->
                     </div>
@@ -345,120 +297,7 @@
                 </div><!-- /.cart-shopping-total -->
             </div><!-- /.shopping-cart -->
         </div> <!-- /.row -->
-        <!-- ============================================== BRANDS CAROUSEL ============================================== -->
-        <div id="brands-carousel" class="logo-slider wow fadeInUp animated"
-            style="visibility: visible; animation-name: fadeInUp;">
 
-            <div class="logo-slider-inner">
-                <div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme"
-                    style="opacity: 1; display: block;">
-                    <div class="owl-wrapper-outer">
-                        <div class="owl-wrapper"
-                            style="width: 3800px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item m-t-15">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand1.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item m-t-10">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand2.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand3.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand4.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand5.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand6.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand2.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img src="assets/images/brands/brand4.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif"
-                                            alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 190px;">
-                                <div class="item">
-                                    <a href="#" class="image">
-                                        <img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif"
-                                            alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-
-                    <!--/.item-->
-                    <div class="owl-controls clickable">
-                        <div class="owl-buttons">
-                            <div class="owl-prev"></div>
-                            <div class="owl-next"></div>
-                        </div>
-                    </div>
-                </div><!-- /.owl-carousel #logo-slider -->
-            </div><!-- /.logo-slider-inner -->
-
-        </div><!-- /.logo-slider -->
-        <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->
     </div><!-- /.container -->
 </div>
 @endsection
