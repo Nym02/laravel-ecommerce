@@ -3,11 +3,11 @@
 namespace App\Models\Frontend;
 
 use App\Models\User;
-use GuzzleHttp\Psr7\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Backend\Product;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Auth;
 
 class Cart extends Model
 {
@@ -41,5 +41,22 @@ class Cart extends Model
         } else {
             $carts = Cart::where('user_id', Request()->ip())->where('oder_id', NULL)->get();
         }
+        return $carts;
+    }
+
+    public static function totalItems(Request $req)
+    {
+        if (Auth::check()) {
+            $carts = Cart::where('user_id', Auth::id())->where('order_id', Null)->get();
+        } else {
+            $carts = Cart::where('user_id', $req->ip())->where('order_id', NULL)->get();
+        }
+
+        $total_items = 0;
+
+        foreach ($carts as $cart) {
+            $total_items += $cart->product_quantity;
+        }
+        return $total_items;
     }
 }

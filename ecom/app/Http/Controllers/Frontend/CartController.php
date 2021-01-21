@@ -104,8 +104,9 @@ class CartController extends Controller
         if (!is_null($cart)) {
             $cart->product_quantity = $request->product_quantity;
             $cart->save();
+            return redirect()->route('cart.show');
         } else {
-            return redirect()->route('ecom.home');
+            return redirect()->route('cart.show');
         }
     }
 
@@ -120,8 +121,9 @@ class CartController extends Controller
         $cart = Cart::find($id);
         if (!is_null($cart)) {
             $cart->delete();
+            return redirect()->route('cart.show');
         } else {
-            return redirect()->route('ecom.home');
+            return redirect()->route('cart.show');
         }
     }
 }

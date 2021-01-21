@@ -59,9 +59,12 @@
                                     <td>{{ $i }}</td>
 
                                     <td class="cart-image">
+                                        @if($cartItems->product->productImage->count() > 0)
                                         <a class="entry-thumbnail" href="detail.html">
-                                            <img src="assets/images/products/p1.jpg" alt="">
+                                            <img src="{{ asset('Backend/img/products/' . $cartItems->product->productImage->first()->product_image) }}"
+                                                alt="">
                                         </a>
+                                        @endif
                                     </td>
                                     <td class="cart-product-name-info">
                                         <h4 class="cart-product-description"><a
@@ -70,39 +73,44 @@
                                             <span class="product-color">COLOR:<span>Blue</span></span>
                                         </div>
                                     </td>
+                                    <form action="{{ route('cart.update', $cartItems->id) }}" method="POST">
+                                        @csrf
+                                        <td class="cart-product-quantity">
+                                            <div class="quant-input">
 
-                                    <td class="cart-product-quantity">
-                                        <div class="quant-input">
+                                                <input type="text" value="{{ $cartItems->product_quantity }}"
+                                                    name="product_quantity">
+                                            </div>
+                                        </td>
+                                        <td class="cart-product-sub-total">
+                                            @if($cartItems->product->product_offer_price != NULL)
+                                            <span class="cart-sub-total-price">৳
+                                                {{ $cartItems->product->product_offer_price }}</span>
+                                            @elseif($cartItems->product->product_offer_price == NULL)
+                                            <span class="cart-sub-total-price">৳
+                                                {{ $cartItems->product->product_price }}</span>
+                                            @endif
 
-                                            <input type="text" value="{{ $cartItems->product_quantity }}">
-                                        </div>
-                                    </td>
-                                    <td class="cart-product-sub-total">
-                                        @if($cartItems->product->product_offer_price != NULL)
-                                        <span class="cart-sub-total-price">৳
-                                            {{ $cartItems->product->product_offer_price }}</span>
-                                        @elseif($cartItems->product->product_offer_price == NULL)
-                                        <span class="cart-sub-total-price">৳
-                                            {{ $cartItems->product->product_price }}</span>
-                                        @endif
+                                        </td>
+                                        <td class="cart-product-grand-total">
+                                            @if($cartItems->product->product_offer_price != NULL)
+                                            <span class="cart-sub-total-price">৳
+                                                {{ $cartItems->product->product_offer_price * $cartItems->product_quantity }}</span>
+                                            @elseif($cartItems->product->product_offer_price == NULL)
+                                            <span class="cart-sub-total-price">৳
+                                                {{ $cartItems->product->product_price * $cartItems->product_quantity }}</span>
+                                            @endif
+                                        </td>
+                                        <td class="cart-product-edit">
+                                            <input type="submit" value="Update">
 
-                                    </td>
-                                    <td class="cart-product-grand-total">
-                                        @if($cartItems->product->product_offer_price != NULL)
-                                        <span class="cart-sub-total-price">৳
-                                            {{ $cartItems->product->product_offer_price * $cartItems->product_quantity }}</span>
-                                        @elseif($cartItems->product->product_offer_price == NULL)
-                                        <span class="cart-sub-total-price">৳
-                                            {{ $cartItems->product->product_price * $cartItems->product_quantity }}</span>
-                                        @endif
-                                    </td>
-                                    <td class="cart-product-edit">
-                                        <a href="#" class="product-edit">Update</a>
-                                    </td>
+                                        </td>
+                                    </form>
                                     <td class="romove-item">
-                                        <a href="#" title="cancel" class="icon">
-                                            <i class="fa fa-trash-o"></i>
-                                        </a>
+                                        <form action="{{ route('cart.destroy', $cartItems->id) }}" method="POST">
+                                            @csrf
+                                            <input type="submit" value="Delete">
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
