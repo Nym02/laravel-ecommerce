@@ -52,31 +52,51 @@
                             <div class="basket-item-count"><span
                                     class="count">{{ App\Models\Frontend\Cart::totalItems() }}</span></div>
                             <div class="total-price-basket"> <span class="lbl">cart -</span> <span class="total-price">
-                                    <span class="sign">$</span><span class="value">600.00</span> </span> </div>
+                                    <span class="sign">$</span><span
+                                        class="value">{{ App\Models\Frontend\Cart::totalPrice() }}</span> </span> </div>
                         </div>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
+                            @foreach (App\Models\Frontend\Cart::orderBy('id', 'asc')->get() as $item)
+
                             <div class="cart-item product-summary">
                                 <div class="row">
                                     <div class="col-xs-4">
+                                        @if($item->product->productImage->count() > 0)
                                         <div class="image"> <a href="detail.html"><img
-                                                    src="{{ asset('Frontend/assets/images/cart.jpg') }}" alt=""></a>
+                                                    src="{{ asset('Backend/img/products/' . $item->product->productImage->first()->product_image) }}"
+                                                    alt=""></a>
                                         </div>
+                                        @endif
                                     </div>
                                     <div class="col-xs-7">
-                                        <h3 class="name"><a href="index8a95.html?page-detail">Simple Product</a></h3>
-                                        <div class="price">$600.00</div>
+                                        <h3 class="name"><a
+                                                href="index8a95.html?page-detail">{{ $item->product->product_title }}</a>
+                                        </h3>
+                                        <div class="price">
+                                            @if($item->product->product_offer_price != NULL)
+                                            {{ $item->product->product_offer_price }}
+                                            @else
+                                            {{ $item->product->product_price }}
+                                            @endif
+                                        </div>
                                     </div>
-                                    <div class="col-xs-1 action"> <a href="#"><i class="fa fa-trash"></i></a> </div>
+                                    <form action="{{ route('cart.destroy', $item->id) }}" method="POST">
+                                        @csrf
+                                        <div class="col-xs-1 action">
+                                            <button type="submit"><i class="fa fa-trash"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
+                            @endforeach
                             <!-- /.cart-item -->
                             <div class="clearfix"></div>
                             <hr>
                             <div class="clearfix cart-total">
                                 <div class="pull-right"> <span class="text">Sub Total :</span><span
-                                        class='price'>$600.00</span> </div>
+                                        class='price'>{{ App\Models\Frontend\Cart::totalPrice() }}</span> </div>
                                 <div class="clearfix"></div>
                                 <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
                             </div>

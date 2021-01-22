@@ -6,11 +6,14 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Backend\Product;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Auth;
 
 class Cart extends Model
 {
     use HasFactory;
+
+    // public $totalItemCost = 0;
 
     public $fillable = [
         'product_id',
@@ -46,7 +49,7 @@ class Cart extends Model
     public static function totalItems()
     {
         if (Auth::check()) {
-            $carts = Cart::where('user_id', Auth::id())->where('order_id', Null)->get();
+            $carts = Cart::where('ip_address', Request()->ip())->where('order_id', Null)->get();
         } else {
             $carts = Cart::where('ip_address', Request()->ip())->where('order_id', NULL)->get();
         }
@@ -57,5 +60,24 @@ class Cart extends Model
             $total_items += $cart->product_quantity;
         }
         return $total_items;
+    }
+
+
+    public static function totalPrice()
+    {
+        if (Auth::check()) {
+            $carts = Cart::where('ip_address', Request()->ip())->where('order_id', Null)->get();
+        } else {
+            $carts = Cart::where('ip_address', Request()->ip())->where('order_id', NULL)->get();
+        }
+        $totalItemCost = 0;
+        foreach ($carts as $cart) {
+            if (!is_null($cart->product->product_offer_price)) {
+                $totalItemCost += $cart->product_quantity * $cart->product->product_offer_price;
+            } else if (is_null($cart->product->product_offer_price)) {
+                $totalItemCost += $cart->product_quantity * $cart->product->product_price;
+            }
+        }
+        return $totalItemCost;
     }
 }

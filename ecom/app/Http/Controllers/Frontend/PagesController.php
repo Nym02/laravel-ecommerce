@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Product;
+use App\Models\Frontend\Cart;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -35,6 +36,11 @@ class PagesController extends Controller
         return view('Frontend.pages.products.details');
     }
 
+    // public function cartDetail()
+    // {
+    //     $cartProduct = Cart::orderBy('id', 'asc')->get();
+    //     return view('Frontend.includes.menubar', compact('cartProduct'));
+    // }
     /**
      * Store a newly created resource in storage.
      *
