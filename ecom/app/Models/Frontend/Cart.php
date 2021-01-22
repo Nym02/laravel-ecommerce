@@ -6,8 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Backend\Product;
-use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class Cart extends Model
 {
@@ -39,17 +38,17 @@ class Cart extends Model
         if (Auth::check()) {
             $carts = Cart::where('user_id', Auth::id())->where('order_id', Null)->get();
         } else {
-            $carts = Cart::where('user_id', Request()->ip())->where('oder_id', NULL)->get();
+            $carts = Cart::where('ip_address', Request()->ip())->where('oder_id', NULL)->get();
         }
         return $carts;
     }
 
-    public static function totalItems(Request $req)
+    public static function totalItems()
     {
         if (Auth::check()) {
             $carts = Cart::where('user_id', Auth::id())->where('order_id', Null)->get();
         } else {
-            $carts = Cart::where('user_id', $req->ip())->where('order_id', NULL)->get();
+            $carts = Cart::where('ip_address', Request()->ip())->where('order_id', NULL)->get();
         }
 
         $total_items = 0;

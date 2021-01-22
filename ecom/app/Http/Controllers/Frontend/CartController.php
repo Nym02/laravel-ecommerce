@@ -48,7 +48,7 @@ class CartController extends Controller
         ]);
 
         if (Auth::check()) {
-            $cart = Cart::where('user_id', Auth::id())->where('product_id', $request->product_id)->first();
+            $cart = Cart::where('ip_address', $request->ip())->where('user_id', Auth::id())->where('product_id', $request->product_id)->first();
         } else {
             $cart = Cart::where('ip_address', $request->ip())->where('product_id', $request->product_id)->first();
         }
