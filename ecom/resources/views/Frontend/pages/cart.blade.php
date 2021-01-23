@@ -281,11 +281,10 @@
                         <thead>
                             <tr>
                                 <th>
-                                    <div class="cart-sub-total">
-                                        Subtotal<span class="inner-left-md">$600.00</span>
-                                    </div>
+
                                     <div class="cart-grand-total">
-                                        Grand Total<span class="inner-left-md">$600.00</span>
+                                        Grand Total<span class="inner-left-md">$
+                                            {{ App\Models\Frontend\Cart::totalPrice()  }}</span>
                                     </div>
                                 </th>
                             </tr>
