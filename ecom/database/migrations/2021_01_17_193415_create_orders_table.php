@@ -22,6 +22,9 @@ class CreateOrdersTable extends Migration
             $table->string('customer_email')->nullable();
             $table->string('customer_shipping_address')->nullable();
             $table->text('customer_message')->nullable();
+            $table->string('product_id');
+            $table->string('product_quantity');
+            $table->string('product_finalprice');
             $table->boolean('is_paid')->default(0);
             $table->boolean('is_complete')->default(0);
             $table->boolean('seen_by_admin')->default(0);
