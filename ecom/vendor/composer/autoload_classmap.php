@@ -41,6 +41,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\Backend\\Category' => $baseDir . '/app/Models/Backend/Category.php',
+    'App\\Models\\Backend\\Coupon' => $baseDir . '/app/Models/Backend/Coupon.php',
     'App\\Models\\Backend\\District' => $baseDir . '/app/Models/Backend/District.php',
     'App\\Models\\Backend\\Divisions' => $baseDir . '/app/Models/Backend/Divisions.php',
     'App\\Models\\Backend\\Product' => $baseDir . '/app/Models/Backend/Product.php',

@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\pageController;
 use App\Http\Controllers\Backend\BrandsController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\DistrictController;
 use App\Http\Controllers\Backend\DivisionController;
 use App\Http\Controllers\Frontend\CartController;
@@ -99,6 +100,15 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function () 
             Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
             Route::post('edit/{id}', [ProductController::class, 'update'])->name('product.update');
             Route::post('destroy/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
+        });
+        //    coupon routes
+        Route::group(['prefix' => '/coupon'], function () {
+            Route::get('/manage', [CouponController::class, 'index'])->name('coupon.manage');
+            Route::get('/create', [CouponController::class, 'create'])->name('coupon.create');
+            Route::post('/store', [CouponController::class, 'store'])->name('coupon.store');
+            Route::get('/edit/{id}', [CouponController::class, 'edit'])->name('coupon.edit');
+            Route::post('edit/{id}', [CouponController::class, 'update'])->name('coupon.update');
+            Route::post('destroy/{id}', [CouponController::class, 'destroy'])->name('coupon.destroy');
         });
         //    division routes
         Route::group(['prefix' => '/division'], function () {
