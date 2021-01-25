@@ -49,6 +49,7 @@
                                         <th scope="col">Coupon Type</th>
                                         <th scope="col">Flat Amount</th>
                                         <th scope="col">Percent Amount</th>
+                                        <th scope="col">Status</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
