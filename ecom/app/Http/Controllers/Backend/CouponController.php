@@ -26,7 +26,7 @@ class CouponController extends Controller
      */
     public function create()
     {
-        //
+        return view('Backend.pages.coupon.create');
     }
 
     /**
